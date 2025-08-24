@@ -13,14 +13,6 @@ export default function ThemeSwitcher() {
   };
 
   useEffect(() => {
-    const saved = localStorage.getItem('theme') as Theme | null;
-    if (saved) {
-      setTheme(saved);
-      return;
-    }
-  }, []);
-
-  useEffect(() => {
     const isLight = theme === '☀️';
 
     if (!document.startViewTransition) {

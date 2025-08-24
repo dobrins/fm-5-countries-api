@@ -485,6 +485,10 @@ a:focus-visible {
   display: flex;
   background-color: var(--clr-filter-bg);
   width: 100%;
+  color: var(--clr-button-txt);
+}
+.input::placeholder {
+  color: var(--grey-400);
 }
 .input:focus {
   box-shadow: 0 0 var(--space-300) rgba(var(--clr-shadow), 0.2);
@@ -504,7 +508,7 @@ a:focus-visible {
   background-color: var(--clr-filter-bg);
   width: 12.5rem;
   text-transform: capitalize;
-  color: var(--grey-950);
+  color: var(--clr-button-txt);
   border: none;
   height: var(--space-700);
   display: flex;
@@ -536,7 +540,7 @@ a:focus-visible {
   background-color: var(--clr-filter-bg);
   width: 12.5rem;
   text-transform: capitalize;
-  color: var(--grey-950);
+  color: var(--clr-button-txt);
   padding-block: var(--space-200);
   position: absolute;
   top: 4rem;

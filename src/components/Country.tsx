@@ -41,11 +41,13 @@ export default function Country(props: Country) {
 const Line = (props: Line) => {
   const { title, description } = props;
 
-  const dd = description.length
-    ? Array.isArray(description)
-      ? description.join(', ')
-      : description
-    : 'N/A';
+  let dd = 'N/A'; // Default fallback
+
+  if (typeof description === 'string' && description.trim().length > 0) {
+    dd = description; // Non-empty string
+  } else if (Array.isArray(description) && description.length > 0) {
+    dd = description.join(', '); // Non-empty array joined by commas
+  }
 
   return (
     <p>

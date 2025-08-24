@@ -26,6 +26,11 @@
   display: flex;
   background-color: var(--clr-filter-bg);
   width: 100%;
+  color: var(--clr-button-txt);
+
+  &::placeholder {
+    color: var(--grey-400);
+  }
 
   &:focus {
     @include dropShadowBig;
