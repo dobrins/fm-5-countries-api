@@ -1,0 +1,91 @@
+@use 'variables' as *;
+@use 'sass:map';
+
+// Media Queries
+
+@mixin mq($breakpoint) {
+  @if $breakpoint == s {
+    @media (max-width: 35em) {
+      @content;
+    }
+  } @else if $breakpoint == m {
+    @media (max-width: 50em) {
+      @content;
+    }
+  }
+}
+
+// Typography
+
+$preset-styles: (
+  1: (
+    font-size: var(--space-400),
+    line-height: 1.375,
+    font-weight: var(--extrabold),
+  ),
+  2: (
+    font-size: var(--space-300),
+    line-height: 1.375,
+    font-weight: var(--extrabold),
+  ),
+  3: (
+    font-size: var(--space-225),
+    line-height: 1.45,
+    font-weight: var(--extrabold),
+  ),
+  '4-semibold': (
+    font-size: var(--space-200),
+    line-height: 2,
+    font-weight: var(--semibold),
+  ),
+  '4-light': (
+    font-size: var(--space-200),
+    line-height: 2,
+    font-weight: var(--light),
+  ),
+  '5-regular': (
+    font-size: var(--space-175),
+    line-height: 1.45,
+    font-weight: var(--regular),
+  ),
+  '5-light': (
+    font-size: var(--space-175),
+    line-height: 2.25,
+    font-weight: var(--light),
+  ),
+  '6-semibold': (
+    font-size: var(--space-150),
+    line-height: 1.35,
+    font-weight: var(--semibold),
+  ),
+  '6-regular': (
+    font-size: var(--space-150),
+    line-height: 1.35,
+    font-weight: var(--regular),
+  ),
+  '6-light': (
+    font-size: var(--space-150),
+    line-height: 1.35,
+    font-weight: var(--light),
+  ),
+);
+
+@mixin preset($n) {
+  $preset: map.get($preset-styles, $n);
+
+  @each $prop, $value in $preset {
+    #{$prop}: $value;
+  }
+}
+
+@mixin dropShadow($alpha: var(--clr-shadow-alpha), $spread: var(--space-150)) {
+  box-shadow: 0 0 #{$spread} rgba(var(--clr-shadow), #{$alpha});
+}
+
+@mixin dropShadowBig {
+  @include dropShadow(0.2, var(--space-300));
+}
+
+@mixin dropShadowFocus {
+  @include dropShadow(var(--clr-shadow-alpha));
+}

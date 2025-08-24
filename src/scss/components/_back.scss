@@ -1,0 +1,13 @@
+@use '../utils' as *;
+
+.back {
+  padding-block: var(--space-1000);
+
+  @include mq(m) {
+    padding-block: var(--space-700);
+  }
+
+  @include mq(s) {
+    padding-block: var(--space-500);
+  }
+}

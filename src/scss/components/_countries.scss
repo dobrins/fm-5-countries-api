@@ -1,0 +1,13 @@
+@use '../utils' as *;
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: clamp(var(--space-200), 4vw, var(--space-900));
+  padding-block-end: var(--space-600);
+
+  @include mq(m) {
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    padding-inline: var(--space-500);
+  }
+}

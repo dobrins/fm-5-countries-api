@@ -1,0 +1,15 @@
+@use '../utils' as *;
+
+.container {
+  max-width: 80rem;
+  padding-inline: var(--space-200);
+  margin-inline: auto;
+
+  @include mq(m) {
+    padding-inline: var(--space-500);
+  }
+
+  @include mq(s) {
+    padding-inline: var(--space-200);
+  }
+}

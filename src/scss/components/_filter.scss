@@ -1,0 +1,14 @@
+@use '../utils/' as *;
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding-block: var(--space-600);
+  gap: var(--space-100);
+
+  @include mq(s) {
+    flex-direction: column;
+    padding-block: var(--space-300);
+    gap: var(--space-500);
+  }
+}

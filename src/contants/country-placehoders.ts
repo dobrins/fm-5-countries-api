@@ -1,0 +1,33 @@
+export const REGIONS = [
+  'all',
+  'africa',
+  'americas',
+  'asia',
+  'europe',
+  'oceania',
+];
+
+export const FLAGSTOLEFT = [
+  'ZWE',
+  'ESH',
+  'USA',
+  'UMI',
+  'ARE',
+  'TLS',
+  'SDN',
+  'SSD',
+  'WSM',
+  'PHL',
+  'PSE',
+  'NIU',
+  'MYS',
+  'LBR',
+  'KWT',
+  'JOR',
+  'GNB',
+  'CUB',
+  'COM',
+  'BHS',
+  'TON',
+  'VUT',
+];

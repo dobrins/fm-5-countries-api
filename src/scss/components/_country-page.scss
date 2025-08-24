@@ -1,0 +1,59 @@
+@use '../utils' as *;
+
+.country-page {
+  @include preset('4-light');
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2rem, 6vw, 7.5rem);
+  padding-block-end: var(--space-300);
+
+  @include mq(m) {
+    grid-template-columns: auto;
+  }
+
+  &__heading {
+    @include preset(1);
+  }
+
+  &__img {
+    @include dropShadow;
+    border-radius: 1rem;
+  }
+
+  &__content {
+    display: grid;
+    align-content: center;
+    gap: var(--space-300);
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include mq(s) {
+      grid-template-columns: auto;
+      gap: var(--space-400);
+    }
+  }
+
+  &__border-countries {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: var(--space-200);
+
+    @include mq(s) {
+      grid-template-columns: auto;
+    }
+
+    & > div:nth-of-type(2) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-200);
+    }
+  }
+
+  strong {
+    @include preset('4-semibold');
+  }
+}

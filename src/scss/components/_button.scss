@@ -1,0 +1,46 @@
+@use '../utils' as *;
+
+.btn {
+  @include dropShadow;
+  @include preset('5-light');
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-100);
+  color: var(--clr-button-txt);
+  background-color: var(--clr-button-bg);
+  padding-inline: var(--space-400);
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: var(--space-25);
+  position: relative;
+
+  &:focus {
+    @include dropShadowFocus;
+    outline: 0;
+  }
+
+  &__icon {
+    width: var(--space-200);
+    height: var(--space-200);
+    fill: currentColor;
+  }
+
+  &--mode {
+    @include preset('4-semibold');
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+
+    @include mq(s) {
+      span {
+        display: none;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}

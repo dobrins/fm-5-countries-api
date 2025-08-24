@@ -1,0 +1,26 @@
+@use '../utils' as *;
+
+.header {
+  @include dropShadow;
+  position: relative;
+  background: var(--clr-header);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--space-1000);
+
+    @include mq(m) {
+      height: var(--space-800);
+    }
+  }
+
+  &__title {
+    @include preset(2);
+
+    @include mq(m) {
+      @include preset(3);
+    }
+  }
+}

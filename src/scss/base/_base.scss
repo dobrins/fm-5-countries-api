@@ -1,0 +1,70 @@
+@use '../utils' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+// ::view-transition-old(root) {
+//   animation-delay: 0;
+// }
+
+// ::view-transition-new(root) {
+//   animation: circle-in 700ms;
+// }
+
+:root {
+  @media (prefers-color-scheme: light) {
+    --theme: ☀️;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --theme: 🌙;
+    color-scheme: dark;
+  }
+}
+
+body {
+  color-scheme: light;
+
+  --clr-body-bg: var(--grey-50);
+  --clr-card-bg: var(--white);
+  --clr-text: var(--grey-950);
+  --clr-header: var(--white);
+  --clr-button-txt: var(--blue-900);
+  --clr-button-bg: var(--white);
+  --clr-shadow: 0, 0, 0;
+  --clr-shadow-alpha: 0.1;
+  --clr-filter-bg: var(--white);
+
+  @container style(--theme: 🌙) {
+    color-scheme: dark;
+
+    --clr-body-bg: var(--blue-950);
+    --clr-card-bg: var(--blue-900);
+    --clr-text: var(--white);
+    --clr-header: var(--blue-900);
+    --clr-button-txt: var(--white);
+    --clr-button-bg: var(--blue-900);
+    --clr-shadow: 0, 0, 0;
+    --clr-shadow-alpha: 0.2;
+    --clr-filter-bg: var(--blue-900);
+  }
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.125rem;
+  color: var(--clr-text);
+  background-color: var(--clr-body-bg);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  &:link,
+  &:visited {
+    color: var(--clr-button-txt);
+  }
+}

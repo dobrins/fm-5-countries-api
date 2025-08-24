@@ -1,0 +1,47 @@
+:root {
+  // FONTS
+
+  --light: 300;
+  --regular: 400;
+  --semibold: 600;
+  --extrabold: 800;
+
+  // COLORS
+
+  --grey-50: hsl(0, 0%, 99%);
+  --grey-100: hsl(0, 0%, 88%);
+  --grey-250: hsl(0, 0%, 77%);
+  --grey-300: hsl(0, 0%, 70%);
+  --grey-350: hsl(0, 0%, 59%);
+  --grey-400: hsl(0, 0%, 50%);
+  --grey-950: hsl(200, 15%, 8%);
+
+  --blue-900: hsl(209, 23%, 22%);
+  --blue-950: hsl(207, 26%, 17%);
+
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  // SIZES
+  --space-0: 0; // 0px
+  --space-25: 0.125rem; // 2px
+  --space-50: 0.25rem; // 4px
+  --space-100: 0.5rem; // 8px
+  --space-150: 0.75rem; // 12px
+  --space-175: 0.875rem; // 14px
+  --space-200: 1rem; // 16px
+  --space-225: 1.125rem; // 18px
+  --space-250: 1.25rem; // 20px
+  --space-300: 1.5rem; // 24px
+  --space-400: 2rem; // 32px
+  --space-500: 2.5rem; // 40px
+  --space-600: 3rem; // 48px
+  --space-700: 3.5rem; // 56px
+  --space-800: 4rem; // 64px
+  --space-900: 4.5rem; // 72px
+  --space-1000: 5rem; // 80px
+  --space-1050: 5.5rem; // 88px
+  --space-1100: 6rem; // 96px
+  --space-1400: 7rem; // 112px
+  --space-1500: 7.5rem; // 120px
+}

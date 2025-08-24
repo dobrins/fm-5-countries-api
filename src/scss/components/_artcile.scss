@@ -1,0 +1,50 @@
+@use "../utils" as *;
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-400);
+  margin-block-start: var(--space-700);
+
+  @include mq(m) {
+    gap: var(--space-200);
+  }
+}
+
+.article {
+  background-color: var(--white);
+  border-radius: var(--space-50);
+  overflow: hidden;
+
+  &__image {
+    height: 12.5rem;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: var(--space-300) var(--space-250);
+
+    @include mq(m) {
+      padding: var(--space-300) var(--space-500);
+    }
+
+    @include mq(s) {
+      padding-inline: var(--space-400);
+    }
+  }
+
+  &__author {
+    @include preset(8);
+    margin-block-end: var(--space-200);
+  }
+
+  &__title {
+    @include preset(6);
+    color: var(--blue-950);
+    margin-block-end: var(--space-100);
+  }
+
+  &__description {
+    @include preset(71);
+  }
+}
