@@ -40,7 +40,11 @@ export default function Dropdown({
 
   return (
     <div className="dropdown" ref={dropdownRef}>
-      <button className="dropdown__btn" onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className="dropdown__btn"
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {selected ?? label}
         <svg
           className={`dropdown__icon ${isOpen && 'dropdown__icon--open'}`}
