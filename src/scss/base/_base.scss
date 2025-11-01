@@ -2,14 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-// ::view-transition-old(root) {
-//   animation-delay: 0;
-// }
-
-// ::view-transition-new(root) {
-//   animation: circle-in 700ms;
-// }
-
 :root {
   @media (prefers-color-scheme: light) {
     --theme: ☀️;
